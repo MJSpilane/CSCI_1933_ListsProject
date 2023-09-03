@@ -1,0 +1,13 @@
+Method				ArrayList Runtime|LinkedList Runtime
+boolean add(T element)		|O(1)		     |O(n)			
+	Explanation : (assuming that ArrayList doesn't need to resize, it would be O(1) because it just make the value after the current last value = to the element. 
+	The add method in linked list is O(n) because it must navigate through the list, incrementing ptr and trailer until they reach the desired index.		
+boolean pairSwap()    		|O(n)		     |O(n)
+	Explanation : since we are just iterating through the lists one time in each of these, and both times we are incrementing by two, the for loop would iterate n/2 times
+	which scales with n. We also must check if the list is sorted at the end but this is also a O(n) iteration, n+n = O(n).
+void merge(List<T> otherList) |O(n^2)	     |O(n^2)
+	Explanation: assuming both lists are similar lengths. The merge method has to iterate through the original list other.size() times. If both lists are roughly size n, 
+	then this would be n*n iterations.
+void reverse()			|O(n)		     |O(n)
+	Explanation: ArrayList's reverse method has 3 for loops, but none of them are nested so the time complexity scales with n+n+n which is O(n).
+	LinkedList's reverse method has one while loop and one for loop, both scale with n^1, so the method scales with n+n = O(n).
